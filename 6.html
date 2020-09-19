@@ -166,6 +166,9 @@ console.log(myGroups);
    var tooltip = d3.select("body")
       .append("div")
      .style("position", "absolute")
+     .attr('class', 'tooltip');     
+     
+ 
   
 //var tooltip = d3.select("body")
 //    .append("div")
@@ -185,9 +188,10 @@ console.log(myGroups);
   }
   var mousemove = function(d) {
     tooltip
-      .html("The exact value of<br>this cell is: " + d.value)
+	  .html("test:"+ d.value  +  "</br>" + "test:" + d.variable)
       .style("left", (d3.mouse(this)[0]+70) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
+      .style('display', 'block');
   }
   var mouseleave = function(d) {
     tooltip
@@ -213,7 +217,7 @@ console.log(myGroups);
       .style("opacity", 0.8)
       .on("mouseover",mouseover)
       .on("mousemove",mousemove)
-      .on("mouseout",mouseout)
+      .on("mouseout",mouseleave)
     //  .on("mouseover", function(d){tooltip.text(d); return tooltip.style("visibility", "visible");})
     //  .on("mousemove", function(){return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
     //  .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
