@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    
+<html>
+    <head>
+        <script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
+        
+        <div id="res"></div>
+    </head>
+    
+    
+    <body>
+        
+        <h3>Simple Transistion</h3>
+        <script>
+            var svg = d3.select('#res').append("svg").attr('width',1000);
+            
+            var x = d3.scaleLinear().domain([0,100]).range([200,800]);
+            
+            svg.append('g').attr("transform","translate(0,30)").call(d3.axisBottom(x));
+        </script>
+    </body>
+</html>

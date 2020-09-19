@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    
+    
+<html>
+    
+    <head>
+        <script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
+        
+        <div id="res"></div>
+
+    </head>
+    
+    <body>
+        <script>
+            var svg = d3.select("#res").append('svg').attr('width',1200).attr('height',1000);
+            
+            var x = d3.scalePoint().domain(['A','B','C','D','E']).range([100,1000]);
+            
+            svg.append('g').attr('transform','translate(0,250)').call(d3.axisBottom(x));
+            
+            
+            svg.append("rect").attr('x',x("C")).attr('y',100).attr('height',150).attr("width", x.bandwidth()).style("fill", "#69b3a2").style("opacity", 0.5);
+            
+        </script>
+    </body>
+    
+</html>
