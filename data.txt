@@ -1,0 +1,1 @@
+Besides arrays, we also have another data structure called “Maps” which maps unique keys to values. A key is an object that you use to retrieve a value at a later date. Given a key and a value, you can store the value in a Map object. After the value is stored, you can retrieve it by using its key.

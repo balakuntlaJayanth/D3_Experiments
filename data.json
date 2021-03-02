@@ -1,0 +1,1 @@
+{"genes": [{"name": "gene w", "stop": 230, "orientation": "forward", "start": 49}, {"name": "gene x", "stop": 305, "orientation": "forward", "start": 265}, {"name": "gene y", "stop": 440, "orientation": "forward", "start": 361}, {"name": "gene z", "stop": 620, "orientation": "reverse", "start": 500}]}
